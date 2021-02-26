@@ -6,6 +6,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       title: "",
+      todos: [],
     };
   }
 
@@ -26,7 +27,10 @@ export default class App extends Component {
       },
     })
       .then((res) => {
-        console.log(res);
+        this.setState({
+          todos: [res.data, ...this.state.todos],
+          title: "",
+        });
       })
       .catch((err) => {
         console.log(err);
