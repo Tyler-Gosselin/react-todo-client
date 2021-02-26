@@ -37,6 +37,23 @@ export default class App extends Component {
       });
   };
 
+  componentDidMount() {
+    axios({
+      method: "GET",
+      url: "http://localhost:5000/api/get-all-todos",
+    })
+      .then((res) => {
+        console.log(res);
+        this.setState({
+          todos: res.data,
+          title: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   render() {
     return (
       <div className="app">
