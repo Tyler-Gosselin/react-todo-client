@@ -91,7 +91,7 @@ export default class App extends Component {
             type="text"
             placeholder="Add Todo"
             onChange={this.handleChange}
-            vaule={this.state.title}
+            value={this.state.title}
           />
           <button type="submit">Add</button>
         </form>
