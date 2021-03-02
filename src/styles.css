@@ -35,3 +35,8 @@ button {
   color: black;
   text-decoration: line-through;
 }
+
+.main-spinner {
+  font-size: 2rem;
+  margin-bottom: 1.75em;
+}
