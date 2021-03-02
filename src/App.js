@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TodoItem from "./components/TodoItem";
+import { API_URL } from "./api/api";
 
 export default class App extends Component {
   constructor(props) {
@@ -64,9 +65,10 @@ export default class App extends Component {
   };
 
   componentDidMount() {
+    console.log(API_URL);
     axios({
       method: "GET",
-      url: "https://tg-flask-todo-api.herokuapp.com/api/get-all-todos",
+      url: `${API_URL}/get-all-todos`,
     })
       .then((res) => {
         this.setState({
