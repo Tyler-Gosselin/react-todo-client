@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { API_URL } from "../api/api";
 
-
 class TodoItem extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,7 @@ class TodoItem extends Component {
   };
 
   render() {
-    const { id, title,  } = this.props.todo;
+    const { id, title } = this.props.todo;
     const { handleDelete } = this.props;
     return (
       <div className="todo-item">
